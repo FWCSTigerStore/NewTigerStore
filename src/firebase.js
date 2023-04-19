@@ -38,14 +38,14 @@ onAuthStateChanged(auth, async (user) => {
         console.log('user logged in: ', user);
         user = user;
         //Check if on login page
-        if(window.location.href.includes("login.html") && !loggingIn){
+        if(window.location.href.includes("SignIn") && !loggingIn){
             let isTeacher = await checkIfTeacher();
             if(isTeacher){
                 console.log("Go to teacher page")
-                window.location.href = "/Teacher/"
+                window.location.href = "/NewTigerStore/Teacher/"
             } else {
                 console.log("Go to student page")
-                window.location.href = "/"
+                window.location.href = "/NewTigerStore/"
             }
         }
         loggedIn = 1;
@@ -57,7 +57,7 @@ onAuthStateChanged(auth, async (user) => {
         console.log('user logged out');
         //Redirect to login page
         if(!window.location.href.includes("SignIn")){
-            window.location.href =  "/SignIn/signIn.html"
+            window.location.href =  "/NewTigerStore/SignIn/"
         }
         loggedIn = 0;
     }

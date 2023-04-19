@@ -1,3 +1,35 @@
+:root{
+    --b1: rgb(255, 67, 20);
+    --b2: rgb(112, 166, 254);
+    --b3: rgb(242, 255, 197);
+    --b4: rgb(255, 83, 83);
+
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(0, 0, 0, 0.87);
+    overflow-x: hidden;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(
+        130deg, 
+        var(--b1) 0% 20%, 
+        var(--b2) 50%, 
+        var(--b3) 70%, 
+        var(--b4) 100%
+    );
+}
+
 #shop-cart{
     position: relative;
     top: -80px;
@@ -7,7 +39,7 @@
 #cart{
     text-align: center;
     display: grid;
-    background-color: lightgrey;
+    background-color: rgba(255, 62, 62, 0.668);
     width: 400px;
     height: 500px;
     /*Center div Vertically*/

@@ -208,5 +208,5 @@ reviewOrderBtn.addEventListener('click', () => {
     localStorage.setItem('order', JSON.stringify(orderItems));
     localStorage.setItem('student', JSON.stringify(student));
     localStorage.setItem('date', timestamp);
-    window.location.href = '/ReviewOrder/';
+    window.location.href = '/NewTigerStore/ReviewOrder/';
 });
