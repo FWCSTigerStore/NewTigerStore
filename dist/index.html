@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Tiger Store</title>
+    <script type="module" crossorigin src="/assets/index-6abe2d3c.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/firebase-b3471a88.js">
+    <link rel="stylesheet" href="/assets/index-f1a4438c.css">
+  </head>
+  <body>
+    <div id="page">
+    
+      <div id="store">
+        <h1>Tiger Store</h1>
+        <label id="bucks-count">0 Tiger Bucks</label>
+        <br>
+       
+        <br>
+        <h1>School Items</h1>
+
+        <div class="shopSection" id="School">
+          <!-- <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/trust_card.png" alt="Trust Card">
+            </div>
+            <label class="itemName">Trust Card</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Trust Card" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/earbuds.png" alt="">
+            </div>
+            <label class="itemName">Earbuds</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Earbuds" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/water_bottle.png" alt="">
+            </div>
+            <label class="itemName">Water Bottle</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Water Bottle" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/stickers.png" alt="">
+            </div>
+            <label class="itemName">Stickers</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Stickers" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/gel_pens.png" alt="">
+            </div>
+            <label class="itemName">Gel Pens</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Gel Pens" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/rubber_bracelets.png" alt="">
+            </div>
+            <label class="itemName">Rubber Bracelets</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Rubber Bracelets" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/pencils.png" alt="">
+            </div>
+            <label class="itemName">Pencils</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Pencils" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/sunglasses.png" alt="">
+            </div>
+            <label class="itemName">Sunglasses</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Sunglasses" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/stylist_pens.png" alt="">
+            </div>
+            <label class="itemName">Stylist Pens</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Stylist Pens" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/hair_ties.png" alt="">
+            </div>
+            <label class="itemName">Hair Ties</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Hair Ties" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./earbuds.png" alt="">
+            </div>
+            <label class="itemName">Swag Card</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Swag Card" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./schoolPhotos/lanyard.png" alt="">
+            </div>
+            <label class="itemName">Lanyard</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="Lanyard" data-type="school">Add to Cart</button>
+          </section>
+          <section class="shopItem">
+            <div class="imageDiv">
+              <img class="itemImage" src="./earbuds.png" alt="">
+            </div>
+            <label class="itemName">XL Trust Card Protector</label>
+            <br>
+            <label class="itemPrice">15 Tiger Bucks</label>
+            <br>
+            <button class="addToCart" id="XL Trust Card Protector" data-type="school">Add to Cart</button>
+          </section> -->
+      </div>
+      <br>
+      <h1>Snacks</h1>
+      <div class="shopSection" id="Snacks">
+<!--         
+        <section class="shopItem">
+          <div class="imageDiv">
+            <img class="itemImage" src="./snackPhotos/doritos.png" alt="">
+          </div>
+          <label class="itemName">Doritos</label>
+          <br>
+          <label class="itemPrice">15 Tiger Bucks</label>
+          <br>
+          <button class="addToCart" id="Doritos" data-type="snacks">Add to Cart</button>
+        </section>
+        <section class="shopItem">
+          <div class="imageDiv">
+            <img class="itemImage" src="./snackPhotos/cheetos.png" alt="">
+          </div>
+          <label class="itemName">Hot Cheetos</label>
+          <br>
+          <label class="itemPrice">15 Tiger Bucks</label>
+          <br>
+          <button class="addToCart" id="Hot Cheetos" data-type="snacks">Add to Cart</button>
+        </section>
+        <section class="shopItem">
+          <div class="imageDiv">
+            <img class="itemImage" src="./snackPhotos/funyuns.png" alt="">
+          </div>
+          <label class="itemName">Takis</label>
+          <br>
+          <label class="itemPrice">15 Tiger Bucks</label>
+          <br>
+          <button class="addToCart" id="Takis" data-type="snacks">Add to Cart</button>
+        </section>
+        <section class="shopItem">
+          <div class="imageDiv">
+            <img class="itemImage" src="./snackPhotos/rice_crispy_treat.png" alt="">
+          </div>
+          <label class="itemName">Rice Crispy Treat</label>
+          <br>
+          <label class="itemPrice">15 Tiger Bucks</label>
+          <br>
+          <button class="addToCart" id="Rice Crispy Treat" data-type="snacks">Add to Cart</button>
+        </section>
+        <section class="shopItem">
+          <div class="imageDiv">
+            <img class="itemImage" src="./snackPhotos/fruit_snacks.png" alt="">
+          </div>
+          <label class="itemName">Fruit Snacks</label>
+          <br>
+          <label class="itemPrice">15 Tiger Bucks</label>
+          <br>
+          <button class="addToCart" id="Fruit Snacks" data-type="snacks">Add to Cart</button>
+        </section>
+        <section class="shopItem">
+          <div class="imageDiv">
+            <img class="itemImage" src="./snackPhotos/honey_bun.png" alt="">
+          </div>
+          <label class="itemName">Honey Bun</label>
+          <br>
+          <label class="itemPrice">15 Tiger Bucks</label>
+          <br>
+          <button class="addToCart" id="Honey Bun" data-type="snacks">Add to Cart</button>
+        </section> -->
+        
+    </div>
+    <h1>Raffle Ticket</h1>
+      <div class="shopSection" id="Raffles">
+        <!-- <section class="shopItem">
+          <div class="imageDiv">
+            <img class="itemImage" src="./rafflePhotos/ticket.png" alt="">
+          </div>
+          <label class="itemName">Raffle Ticket</label>
+          <br>
+          <label class="itemPrice">15 Tiger Bucks</label>
+          <br>
+          <button class="addToCart" id="Raffle Ticket" data-type="raffle">Add to Cart</button>
+        </section> -->
+      </div>
+
+      <br>
+      <button id="reviewOrderBtn">Review Order</button>
+        
+    </div>
+    </div>
+    
+  </body>
+</html>

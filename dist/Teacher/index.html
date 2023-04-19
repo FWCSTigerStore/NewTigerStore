@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Teacher Dashboard</title>
+  <script type="module" crossorigin src="/assets/friendLink-184beb92.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/firebase-b3471a88.js">
+  <link rel="stylesheet" href="/assets/index-e1e6bee6.css">
+</head>
+<body>
+    <div class="background">
+
+    </div>
+    <div class="app">
+        <h1>Teacher Dashboard</h1>
+
+        <div class="tabslist">
+            <button id="students-tab" class="tablink selected" data-tab="students">Students</button>
+            <button id="orders-tab" class="tablink" data-tab="orders">Orders</button>
+            <button id="items-tab" class="tablink" data-tab="items">Items</button>
+        </div>
+        
+        <div class="students visible tab">
+            <h2>Students</h2>
+            <div class="students-tables">
+                <div class="eightGraders">
+                    <h3 >8th Graders</h2>
+                    <table id="eigthGrade">
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Tiger Bucks</th>
+                        </tr>
+                        
+                    </table>
+                </div>
+                <div class="seventhGraders">
+                    <h3 >7th Graders</h2>
+                        <table id="seventhGrade">
+                            <tr>
+                                <th>Student Name</th>
+                                <th>Tiger Bucks</th>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                <div class="sixthGraders">
+                    <h3 >6th Graders</h2>
+                        <table id="sixthGrade">
+                            <tr>
+                                <th>Student Name</th>
+                                <th>Tiger Bucks</th>
+                            </tr>
+                        
+                        </table>
+                </div>
+            </div>
+            <br>
+            <div class="student-actions">
+                <button id="show-add-student-prompt">Add Student</button>
+            </div>
+        </div>
+        <br>
+        <div class="orders invisible tab">
+            <h2>Orders</h2>
+            <div class="orders-tables">    
+                    <table id="orderTable">
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Student Name</th>
+                            <th>Halftime Facilitator</th>
+                            <th>Item #1</th>
+                            <th>Item #2</th>
+                            <th>Item #3</th>
+                            <th></th>
+                        </tr>
+                    
+                    </table>
+            </div>
+            <br>
+            <div class="orders-actions">
+                <button id="clear-orders">Clear Orders</button>
+            </div>
+        </div>
+        <br>
+        <div class="items invisible tab">
+            <h2>Items</h2>
+            <div class="items-table">
+                <table id="itemsTable">
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Item Price</th>
+                        <th>Item Quantity</th>
+                        <th>Item Type</th>
+                        <th>Item Image</th>
+                        <th></th>
+                    </tr>
+                    
+                </table>
+            </div>
+            <br>
+            <div class="items-actions">
+                <button id="show-add-item-prompt">Add Item</button>
+            </div>
+        </div>
+        <br>
+        <div id="add-student-prompt" class="inactive hidden">
+            <h2>Add Student</h2>
+            <label for="student-name">Student Name</label>
+            <input type="text" id="student-name" name="student-name" placeholder="John Doe">
+            <br>
+            <label for="student-grade">Student Grade</label>
+            <select id="student-grade" name="student-grade">
+                <option value="6">6th Grade</option>
+                <option value="7">7th Grade</option>
+                <option value="8">8th Grade</option>
+            </select>
+            <br>
+            <label for="student-bucks">Student Email</label>
+            <input type="email" id="student-email" name="student-email" placeholder="johndoe@fwcsstudents.com">
+            <br>
+            <label for="student-bucks">Student Halftime Facilitator</label>
+            <input type="text" id="student-facilitator" name="student-facilitator" placeholder="Ms. Kemme">
+            <br>
+            <label for="student-bucks">Student Tiger Bucks</label>
+            <input type="number" id="student-bucks" name="student-bucks" placeholder="10">
+            <br>
+            <label for="student-trust-card">Student Has Trust Card</label>
+            <input type="checkbox" id="student-trust-card" name="student-trust-card">
+            <br>
+            <button id="add-student">Add Student</button>
+        </div>
+        <br>
+        <div id="add-item-prompt" class="inactive hidden">
+            <h2>Add Item</h2>
+            <label for="item-name">Item Name</label>
+            <input type="text" id="item-name" name="item-name" placeholder="Candy Bar">
+            <br>
+            <label for="item-price">Item Price</label>
+            <input type="number" id="item-price" name="item-price" placeholder="1">
+            <br>
+            <label for="item-quantity">Item Quantity</label>
+            <input type="number" id="item-quantity" name="item-quantity" placeholder="10">
+            <br>
+            <label for="item-type">Item Type</label>
+            <select id="edit-item-type" name="item-type">
+                <option value="School">School</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Raffles">Raffles</option>
+            </select>
+            <br>
+            <label for="item-image">Item Image</label>
+            <input type="file" id="item-image" name="item-image">
+            <br>
+            <button id="add-item">Add Item</button>
+        </div>
+
+        <div id="edit-item-prompt" class="inactive hidden">
+            <h2>Edit Item</h2>
+            <label for="item-name">Item Name</label>
+            <input type="text" id="edit-item-name" name="item-name" placeholder="Candy Bar">
+            <br>
+            <label for="item-price">Item Price</label>
+            <input type="number" id="edit-item-price" name="item-price" placeholder="1">
+            <br>
+            <label for="item-quantity">Item Quantity</label>
+            <input type="number" id="edit-item-quantity" name="item-quantity" placeholder="10">
+            <br>
+            <label for="item-type">Item Type</label>
+            <select id="edit-item-type" name="item-type">
+                <option value="School">School</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Raffles">Raffles</option>
+            </select>
+            <br>
+            <label for="item-image">Item Image (Leave empty if want to stay the same)</label>
+            <input type="file" id="edit-item-image" name="edit-item-image">
+            <br>
+            <button id="edit-item">Edit Item</button>
+        </div>
+    </div>
+    
+</body>
+</html>
