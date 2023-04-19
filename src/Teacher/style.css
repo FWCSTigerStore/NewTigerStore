@@ -254,6 +254,7 @@ input, select{
         border: none;
         font-size: medium;
         background-color: lightgreen;
+        cursor: pointer;
 
   }
 

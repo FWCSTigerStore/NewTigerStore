@@ -48,6 +48,28 @@ onAuthStateChanged(auth, async (user) => {
                 window.location.href = "/NewTigerStore/"
             }
         }
+        //Get base url
+        let url = new URL(window.location.href);
+        let baseUrl = url.origin;
+        console.log(baseUrl)
+        //Check if on main page
+        if(window.location.href == baseUrl + "/NewTigerStore/"){
+            let isTeacher = await checkIfTeacher();
+            if(isTeacher){
+                console.log("Go to teacher page")
+                window.location.href = "/NewTigerStore/Teacher/"
+            }
+        }
+
+        //Check if on teacher page
+        if(window.location.href.includes("Teacher")){
+            let isTeacher = await checkIfTeacher();
+            if(!isTeacher){
+                console.log("Go to student page")
+                window.location.href = "/NewTigerStore/"
+            }
+        }
+
         loggedIn = 1;
        
        

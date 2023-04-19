@@ -1,5 +1,5 @@
 import { async } from '@firebase/util';
-import { loadStudents, loadOrders, updateStudentTigerBucksTeacher, clearOrders, addStudent, getItems, addItem, editItem, deleteItem, deleteOrder } from '../firebase.js';
+import { loadStudents, loadOrders, updateStudentTigerBucksTeacher, clearOrders, addStudent, getItems, addItem, editItem, deleteItem, deleteOrder, signOutUser } from '../firebase.js';
 
 const ORDER_TABLE = document.getElementById('orderTable');
 const CLEAR_ORDERS = document.getElementById('clear-orders');
@@ -17,6 +17,8 @@ const EDIT_ITEM_PROMPT = document.getElementById('edit-item-prompt');
 const EDIT_ITEM = document.getElementById('edit-item');
 
 const TABS_BUTTONS = document.querySelectorAll('.tablink');
+
+const LOG_OUT = document.getElementById('log-out');
 
 let items = [];
 
@@ -373,4 +375,11 @@ TABS_BUTTONS.forEach(button => {
         document.querySelector("." + button.getAttribute('data-tab')).classList.add('visible');
         document.querySelector("." + button.getAttribute('data-tab')).classList.remove('invisible');
     })
+})
+
+LOG_OUT.addEventListener('click', async function() {
+    //Log the user out
+    await signOutUser();
+    //Go to the login page
+    window.location.href = "/NewTigerStore/SignIn/";
 })

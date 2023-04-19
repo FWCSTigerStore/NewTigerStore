@@ -14,6 +14,8 @@ let student = {
 }
 const bucksCountlbl = document.getElementById('bucks-count')
 
+const LOG_OUT = document.getElementById('log-out');
+
 //Delay until firebase is loaded
 setTimeout(async() => {
 
@@ -210,3 +212,10 @@ reviewOrderBtn.addEventListener('click', () => {
     localStorage.setItem('date', timestamp);
     window.location.href = '/NewTigerStore/ReviewOrder/';
 });
+
+LOG_OUT.addEventListener('click', async function() {
+    //Log the user out
+    await signOutUser();
+    //Go to the login page
+    window.location.href = "/NewTigerStore/SignIn/";
+})
