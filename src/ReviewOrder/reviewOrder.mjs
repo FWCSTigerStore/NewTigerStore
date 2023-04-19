@@ -15,7 +15,7 @@ if(localStorage.getItem('order') != null){
     console.log(order)
     loadShopCart()
 } else{
-    window.location.href = "/"
+    window.location.href = "/NewTigerStore/"
 }
 
 function loadShopCart(){
@@ -54,7 +54,7 @@ submitOrderBtn.addEventListener('click', async () => {
         localStorage.removeItem('order')
         localStorage.removeItem('student')
         localStorage.removeItem('date')
-        window.location.href = "/"
+        window.location.href = "/NewTgierStore/"
     })
 
    
