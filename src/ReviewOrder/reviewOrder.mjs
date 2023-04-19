@@ -1,4 +1,4 @@
-import { addOrder, updateStudentTigerBucks, updateItemSupply } from "./firebase.js";
+import { addOrder, updateStudentTigerBucks, updateItemSupply } from "../firebase.js";
 let orderItems = null
 let student = JSON.parse(localStorage.getItem('student'))
 let order = {
