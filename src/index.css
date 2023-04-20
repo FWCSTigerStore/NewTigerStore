@@ -4,9 +4,10 @@
   --b3: rgb(242, 255, 197);
   --b4: rgb(255, 83, 83);
 
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Lucida Console", "Courier New", monospace;
   line-height: 1.5;
   font-weight: 400;
+  font: "Lucida Console";
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
