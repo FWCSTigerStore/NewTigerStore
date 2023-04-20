@@ -54,7 +54,7 @@ submitOrderBtn.addEventListener('click', async () => {
         localStorage.removeItem('order')
         localStorage.removeItem('student')
         localStorage.removeItem('date')
-        window.location.href = "/NewTgierStore/"
+        window.location.href = "/NewTigerStore/"
     })
 
    
